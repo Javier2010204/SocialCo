@@ -1,0 +1,19 @@
+.top-space
+	.row.center-xs
+		.col-xs-8.col-md-10
+			.box
+				.row
+					.col-lg-2.col-sm-3.col-xs-10
+						.box
+							%ul.remove-bullet-points
+								%li= link_to "Explorar"
+								%li= link_to "Sugerencias"
+								%li= link_to "Mi perfil", current_user	
+					.col-xs-10.col-sm
+						.box
+							.white.large-padding
+								=render "posts/form"
+						#posts
+							=render @posts
+							
+

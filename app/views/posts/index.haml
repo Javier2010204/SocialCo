@@ -1,0 +1,17 @@
+%h1 Publicaciones
+%table
+	%thead
+		%tr
+			%th Texto
+			%th Usuario
+			%th 
+	%tbody
+	- @posts.each do |post|
+		%tr
+			%td= post.body
+			%td= post.user.email
+			%td= link_to 'leer mas', post
+			%td= link_to 'Editar', edit_post_path(post)
+			%td= link_to 'Eliminar', post, method: :delete, data: {confirm: 'Seguro quieres eliminar?'}
+	%br 
+	=link_to 'Escribir post', new_post_path

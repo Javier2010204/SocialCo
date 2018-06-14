@@ -1,0 +1,17 @@
+%article.large-padding.white.top-space.mdl-shadow--2dp
+	.row
+		.col-xs-12.col-sm-6
+			.box
+				.col-xs-12.col-md-6
+					.box
+						.top-space#user-avatar.text-right	
+							=circle_img post.user.avatar.url(:medium),20
+				.col-xs-12.col-md-6
+					.box
+						.top-space
+							=link_to post.user.username, post.user
+	.row.top-space
+		.col-xs-12.col-md-8
+			.box
+				.top-space
+					%p=post.body

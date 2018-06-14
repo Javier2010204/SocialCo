@@ -1,0 +1,24 @@
+.full-height.row.middle-xs.white-text.center-xs.main-background.no-margin{style:"background-color:red;"}
+  .col-xs-10.col-sm-8.col-md-6.col-lg-4
+    .box
+      .big-padding.blue.white-text
+        %h1.no-margin.bold.light-blue-text Iniciar sesion
+        .top-space
+          = form_for(resource, as: resource_name, url: new_session_path(resource_name)) do |f|
+            = devise_error_messages!
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              = f.email_field :email, autofocus: true, class: "mdl-textfield__input"
+              = f.label :email, class: "mdl-textfield__label grey-text"
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              = f.password_field :password, autofocus: true, class: "mdl-textfield__input"
+              = f.label "contraseña" , class: "mdl-textfield__label grey-text"
+            .mdl-textfield.center-xs
+              -if devise_mapping.rememberable? 
+                %label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect
+                  =f.check_box :remember_me, id: "recordar", class: "mdl-checkbox__input"
+                  recordar
+            .top-space
+              =f.submit "ingresar", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+              =render "devise/shared/links"
+
+
