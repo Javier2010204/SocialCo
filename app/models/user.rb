@@ -29,6 +29,7 @@
 #  cover_content_type     :string
 #  cover_file_size        :integer
 #  cover_updated_at       :datetime
+# codigo => javier1996001 
 #
 
 class User < ApplicationRecord
@@ -76,7 +77,6 @@ class User < ApplicationRecord
     end
 
     #Solicitud(usuario, amigo, estado)
-
 
     def my_friend?(friend)
       Friendship.friends?(self,friend)

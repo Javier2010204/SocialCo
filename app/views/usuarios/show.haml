@@ -37,5 +37,28 @@
 					=form_for @user,remote: true, :authenticity_token => true do |f|
 						=f.file_field :avatar,class:"remotipart"
 						=f.file_field :cover,class:"remotipart"
+- @publicaciones.each do |publicacion|
+	.row.top-space.center-xs
+		.col-xs-12.col-sm-6
+			.box.mdl-shadow--2dp.large-padding.white
+				= publicacion.body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		

@@ -5,6 +5,7 @@ class UsuariosController < ApplicationController
 
 	def show
 		@are_friends = current_user.my_friend?(@user)
+		@publicaciones = @user.posts
 	end
 
 	def update

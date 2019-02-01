@@ -4,5 +4,14 @@
 window.snack = (options)->
 	document.querySelector("#global-snackbar")
 		.MaterialSnackbar.showSnackbar(options)
+
+window.loading = false
+
 $(document).on "turbolinks:load page:fetch ready", ()->
 	componentHandler.upgradeDom();
+	$(".mdl-layout").scroll -> 
+		if !window.loading && $(".mdl-layout").scrollTop() > $(document).height() - 200
+			window.loading = true
+			url = $(".next_page").attr("href")
+			$.getScript url if url
+			console.log("cargando...")
