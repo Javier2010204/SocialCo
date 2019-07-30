@@ -15,20 +15,20 @@
 									%span= best_in_place_if current_user == @user, @user, :last_name
 									%p
 										%span= best_in_place_if current_user == @user, @user, :username
-						.col-xs-4.col-md-2	
+						.col-xs-4.col-md-2
 							.box
 								-unless @are_friends
 									=button_to friendships_path(friend_id: @user.id),method: :post, remote: true, :"data-type" => "script", class:"mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" do
 										%i.material-icons person_add
 				.large-padding
 					.row
-						.col-xs-6	
+						.col-xs-6
 							.box
 								Seguidores
 						.col-xs-6
 							.box
 								= @user.posts.count
-								Posts 
+								Posts
 					.row.center-xs
 						.col-xs-12.col-md-8
 							.box
@@ -37,28 +37,13 @@
 					=form_for @user,remote: true, :authenticity_token => true do |f|
 						=f.file_field :avatar,class:"remotipart"
 						=f.file_field :cover,class:"remotipart"
+.row.center-xs
+	.col-xs-12
+		.box
+			%h1 Publicaciones
+
 - @publicaciones.each do |publicacion|
 	.row.top-space.center-xs
 		.col-xs-12.col-sm-6
 			.box.mdl-shadow--2dp.large-padding.white
 				= publicacion.body
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
