@@ -1,7 +1,7 @@
 = form_for @post, remote: true do |f|
 	-if @post.errors.any?
 		%h3="#{pluralize(@post.errors.count, "error")} hicieron que no se pudiera guardar el post"
-		%ul 
+		%ul
 			-@post.errors.full_messages.each do |message|
 				%li= message
 	.mdl-textfield.mdl-js-textfield.full-width

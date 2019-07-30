@@ -37,10 +37,6 @@
 					=form_for @user,remote: true, :authenticity_token => true do |f|
 						=f.file_field :avatar,class:"remotipart"
 						=f.file_field :cover,class:"remotipart"
-.row.center-xs
-	.col-xs-12
-		.box
-			%h1 Publicaciones
 
 - @publicaciones.each do |publicacion|
 	.row.top-space.center-xs
