@@ -20,6 +20,10 @@ class Post < ApplicationRecord
 
   scope :nuevos, ->{order("created_at desc")}
 
+  has_attached_file :image_post, styles: {thumb: "100x100", medium: "500x500"}
+
+  validates_attachment_content_type :image_post, content_type: /\Aimage\/.*\Z/
+
   def self.all_for_user(user)
   	Post.where(user_id: user.id)
   		.or(Post.where(user_id: user.friend_ids))
