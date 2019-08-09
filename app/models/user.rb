@@ -29,7 +29,6 @@
 #  cover_content_type     :string
 #  cover_file_size        :integer
 #  cover_updated_at       :datetime
-# codigo => javier1996001 
 #
 
 class User < ApplicationRecord

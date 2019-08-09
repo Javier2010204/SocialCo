@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: friendships
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer
+#  friend_id  :integer          not null
+#  status     :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Friendship < ApplicationRecord
   include AASM
   belongs_to :user
