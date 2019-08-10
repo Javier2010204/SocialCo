@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		
+
 	end
 
 	def new
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 			if @post.save
 				format.js
 				format.html {redirect_to @post, notice: "El post fue creado correctamente"}
-				format.json{render :show, status: :created, location: @post}	
+				format.json{render :show, status: :created, location: @post}
 			else
 				format.html {render :new, notice: "No se pudo crear el post, intenta mas tarde"}
 				format.json{render json: @post.errors, status: :unprocessable_entity}
@@ -28,14 +28,14 @@ class PostsController < ApplicationController
 	end
 
 	def edit
-		
+
 	end
 
 	def update
 		respond_to do |format|
 			if @post.update(post_params)
 				format.html{redirect_to @post, notice: "El post fue actualizado correctamente"}
-				format.json{render :show, status: :ok, location: @post}	
+				format.json{render :show, status: :ok, location: @post}
 			else
 				format.html{render :edit}
 				format.json{render json: @post.errors, status: :unprocessable_entity}
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
 
 	private
 		def post_params
-			params.require(:post).permit(:body)
+			params.require(:post).permit(:body, :image_post)
 		end
 
 		def set_post

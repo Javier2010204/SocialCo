@@ -20,7 +20,7 @@ class Post < ApplicationRecord
 
   scope :nuevos, ->{order("created_at desc")}
 
-  has_attached_file :image_post, styles: {thumb: "100x100", medium: "500x500"}
+  has_attached_file :image_post, styles: {thumb: "100x100", medium: "500x500"}, default_url:"/missing.png"
 
   validates_attachment_content_type :image_post, content_type: /\Aimage\/.*\Z/
 

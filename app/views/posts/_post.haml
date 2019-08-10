@@ -18,4 +18,7 @@
 				.top-space
 					%p=post.body
 				.top-space
-					.big-padding.cover{style:"background-image:url(#{@post.image_post.url(:medium)})"}
+					-if post.image_post_file_name.nil?
+
+					-else
+						=image_tag("#{post.image_post.url(:medium)}")
