@@ -2,15 +2,17 @@
 	.row
 		.col-xs-12.col-sm-6
 			.box
-				.col-xs-12.col-md-6
-					.box
-						.top-space#user-avatar.text-right
-							=circle_img post.user.avatar.url(:medium),50
-				.col-xs-12.col-md-6
-					.box
-						.top-space
+				.row.middle-xs
+					.col-xs-12.col-md-2
+						.box
+					.col-xs-12.col-md-2
+						.box
+							#user-avatar.text-right
+								=circle_img post.user.avatar.url(:medium),50
+					.col-xs-12.col-md-2
+						.box
 							=link_to post.user.username, post.user
-	.row.top-space
+	.row.top-space.middle-xs.center-xs
 		.col-xs-12.col-md-8
 			.box
 				.top-space
