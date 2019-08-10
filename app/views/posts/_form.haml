@@ -8,5 +8,7 @@
 		=f.text_area :body, class:"mdl-textfield__input", rows: "3"
 		=f.label :body, "Comparte con la comunidad", class: "mdl-textfield__label"
 		=f.file_field :image_post
+		%button.mdl-button.mdl-js-button.mdl-button--icon
+			%i.material-icons mood
 	.actions.text-right
 		=f.submit "Publicar", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
