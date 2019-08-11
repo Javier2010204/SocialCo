@@ -16,6 +16,8 @@
 class Post < ApplicationRecord
   belongs_to :user
 
+  validates :body, presence: true
+
   after_create :send_to_action_cable
 
   scope :nuevos, ->{order("created_at desc")}

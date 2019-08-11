@@ -9,7 +9,7 @@ window.loading = false
 
 $(document).on "turbolinks:load page:fetch ready", ()->
 	componentHandler.upgradeDom();
-	$(".mdl-layout").scroll -> 
+	$(".mdl-layout").scroll ->
 		if !window.loading && $(".mdl-layout").scrollTop() > $(document).height() - 200
 			window.loading = true
 			url = $(".next_page").attr("href")
