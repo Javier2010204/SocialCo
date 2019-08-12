@@ -8,14 +8,13 @@
 							%ul.remove-bullet-points
 								%li= link_to "Explorar"
 								%li= link_to "Sugerencias"
-								%li= link_to "Mi perfil", current_user	
+								%li= link_to "Mi perfil", current_user
 					.col-xs-10.col-sm
 						.box
 							.white.large-padding
 								=render "posts/form"
+								= image_tag 'background.jpg', class: 'hidden image_to_upload'
 						#posts
 							.data
 								=render @posts
 							= will_paginate @posts
-							
-

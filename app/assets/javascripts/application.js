@@ -17,17 +17,9 @@
 //= require best_in_place
 //= require best_in_place.jquery-ui
 //= require remoti.coffee
+//= require post.coffee
 //= require_tree .
 $(document).ready(function() {
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
 });
-
-document.querySelectorAll("[type='file']").forEach(function(control){
-  control.addEventListener('change', function(ev){
-    console.log(ev.target.file[0].name);
-    console.log(this.id)
-
-    document.querySelector("[for='"+this.id+"']").innerHTML = ev.target.files[0].name;
-  })
-})
