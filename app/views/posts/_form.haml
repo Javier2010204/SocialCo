@@ -9,5 +9,5 @@
 		=f.label :body, "Comparte con la comunidad", class: "mdl-textfield__label"
 	.actions.text-right
 		%label.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored{for: "file-picker"} Subir foto
-		=f.file_field :image_post, id: "file-picker", class: "hidden photo-upload"
+		=f.file_field :image_post, id: "file-picker", class: "hidden"
 		=f.submit "Publicar", class: "mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
