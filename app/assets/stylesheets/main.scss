@@ -14,6 +14,25 @@ body{
 	background-size: cover;
 	background-position: center;
 }
+
+.file-picker{
+	background-color: #000;
+	color: white;
+	font-family: Roboto, Helvetica, Arial;
+	display: inline-block;
+	padding: 10px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+
+.file-picker + [type='file']{
+	display: none;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
 .remotipart{
 	display: none;
 }
