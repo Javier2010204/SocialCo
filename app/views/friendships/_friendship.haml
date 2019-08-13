@@ -1,10 +1,10 @@
-.row.top-space
-    .col-xs-8.text-left
+.row.top-space.center-xs
+    .col-xs-2.col-md-2.text-left
         .box
             =circle_img friendship.user_view.avatar.url(:thumb), 60
-    .col-xs-7.col-md-8
+    .col-xs-7.col-md-2
         .box.text-left
-            =link_to friendship.user_view.username, friendship.user_view 
-    .col-xs-4
+            =link_to friendship.user_view.username, friendship.user_view
+    .col-xs-4.col-md-4
         .box
             =friendship.status_or_buttons
