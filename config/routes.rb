@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 		root 'main#home'
 	end
 
-	unauthenticated :user do 
+	unauthenticated :user do
 		root 'main#unregistered'
 	end
 
@@ -20,5 +20,5 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  mount ActionCable.server => '/cable'
+  	mount ActionCable.server => '/cable'
 end
