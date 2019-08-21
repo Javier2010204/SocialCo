@@ -18,7 +18,6 @@
 				.top-space
 					%p=post.body
 				.top-space
-					-if post.image_post_file_name.nil?
-
-					-else
+					-if !post.image_post_file_name.nil?
 						=image_tag("#{post.image_post.url(:medium)}")
+					-else
