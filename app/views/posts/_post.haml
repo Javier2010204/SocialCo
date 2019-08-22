@@ -5,6 +5,7 @@
 				.row.middle-xs
 					.col-xs-12.col-md-2
 						.box
+							%p= time_ago_in_words(post.created_at)
 					.col-xs-12.col-md-2
 						.box
 							#user-avatar.text-right
