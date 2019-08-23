@@ -7,8 +7,10 @@ class ApplicationController < ActionController::Base
 	  def set_layout
 	  	"application"
 		end
-		
+
 		def configuar_strong_params
 			devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
 		end
+
+#_domainconnect.gd.domaincontrol.com
 end
