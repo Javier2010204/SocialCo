@@ -22,3 +22,7 @@
 					-if !post.image_post_file_name.nil?
 						=image_tag("#{post.image_post.url(:medium)}")
 					-else
+	.row.top-space.middle-xs.center-xs
+		.col-xs-12.col-md-8
+			.box
+				= link_to 'ver mas', post

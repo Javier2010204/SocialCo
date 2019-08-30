@@ -44,6 +44,7 @@ class User < ApplicationRecord
     validate :validate_username_regex
     #GXFSYMWR8D4D
     has_many :posts
+	has_many :comments
 
     has_many :friendships
     has_many :followers, class_name: "Friendship", foreign_key: "friend_id"
@@ -55,6 +56,8 @@ class User < ApplicationRecord
 
     has_attached_file :cover, styles: {thumb: "400x300", medium: "800x600"}, default_url: "/images/:style/missing_cover.jpg"
     validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
+
+	has_many :comments
 
     def friend_ids
         Friendship.active.where(user:self).pluck(:friend_id)

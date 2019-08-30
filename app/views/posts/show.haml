@@ -1,4 +1,9 @@
-%p @post.body
-%p @post.user.email
-=link_to 'Editar', edit_post_path(@post)
-=link_to 'volver', posts_path
+%p= @post.body
+%p= @post.user.email
+%h3 Comentarios
+=render 'comments/form'
+%ul#selector
+    -@post.comments.each do |comment|
+        %li
+            =comment.body
+            %span=comment.user.email

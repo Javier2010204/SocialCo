@@ -1,0 +1,6 @@
+<%= form_for([@post,@comment]) do |f| %>
+    <div class="field">
+        <%= f.text_field :body%>
+        <%= f.submit "enviar"%>
+    </div>
+<% end %>
