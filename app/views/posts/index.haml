@@ -2,12 +2,14 @@
 %table
 	%thead
 		%tr
+			%th Id
 			%th Texto
 			%th Usuario
 			%th 
 	%tbody
 	- @posts.each do |post|
 		%tr
+			%td= post.id
 			%td= post.body
 			%td= post.user.email
 			%td= link_to 'leer mas', post

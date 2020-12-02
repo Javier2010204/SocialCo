@@ -3,7 +3,8 @@
 		.box
 			.white.mdl-shadow--2dp.top-space.relative
 				.big-padding.white-text-text-left.cover.relative#user-cover{style:"background-image:url(#{@user.cover.url(:medium)})"}
-					=render "usuarios/menu_avatar"
+					- if @user == current_user
+						=render "usuarios/menu_avatar"
 					.top-space#user-avatar
 						=circle_img @user.avatar.url(:medium),100
 				%section.border-bottom.top-space
@@ -29,6 +30,10 @@
 							.box
 								= @user.posts.count
 								Posts
+					.row
+						.col-xs-6
+							.box
+								= @user.email
 					.row.center-xs
 						.col-xs-12.col-md-8
 							.box

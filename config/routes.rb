@@ -6,6 +6,16 @@ Rails.application.routes.draw do
         resources :comments
     end
 
+ # = //
+ # /**/
+ #get -> /posts
+ #get -> /new
+ #post -> /create
+ #get -> /edit/:id
+ #put -> /update
+ #get -> /show/:idss
+
+
 	post "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up"
 
 	authenticated :user do

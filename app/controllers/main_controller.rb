@@ -10,7 +10,7 @@ class MainController < ApplicationController
 
 	protected
 	  def set_layout
-		"landing" if action_name == "unregistered"
+		  "landing" if action_name == "unregistered"
 	  end
 
 end

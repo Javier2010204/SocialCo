@@ -19,7 +19,7 @@ class FriendshipsController < ApplicationController
             else
                 format.html{redirect_to @friend, alert: 'Error en la solicitud de amistad'}
             end
-        end
+        end 
     end
 
     def update
@@ -38,6 +38,7 @@ class FriendshipsController < ApplicationController
     private
         def find_friend
             @friend = User.find(params[:friend_id])
+
         end
 
         def find_friendship

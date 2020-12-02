@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
 	before_action :set_post, except:[:index,:new,:create]
 	def index
-		@posts = Post.all_for_user(current_user).nuevos.paginate(page:1,per_page:5)
+		@posts = Post.all
 	end
+
+=begin 
+=end
 
 	def show
 		@comments = @post.comments
